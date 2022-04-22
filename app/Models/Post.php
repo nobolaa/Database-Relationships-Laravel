@@ -16,4 +16,8 @@ class Post extends Model
     public function categorias(){
         return $this->belongsTo(Categoria::class);
     }
+
+    public function image(){
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }
