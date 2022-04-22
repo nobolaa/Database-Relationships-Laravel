@@ -46,4 +46,12 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
         //hasOne(modeloTabla, nombreClaveForanea (user_id - tabla profile), nombreClave (id - tabla user))
     }
+
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
+    public function videos(){
+        return $this->hasMany(Video::class);
+    }
 }
